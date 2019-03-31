@@ -5,7 +5,10 @@ LABEL Environment Development
 RUN apt update && \
     apt install -y python && \
     apt install -y python-pip && \
-    pip install BeautifulSoup
+    pip install BeautifulSoup && \
+    rm -rf /var/lib/apt/lists/*
  
 WORKDIR /app
 COPY paste_scraper.py /app
+
+# docker run -it --rm -v $PWD/scrapes:/scrapes --name pyscraper pyscraper
