@@ -12,3 +12,4 @@ WORKDIR /app
 COPY paste_scraper.py /app
 
 # docker run -it --rm -v $PWD/scrapes:/scrapes --name pyscraper pyscraper
+# docker run -it --rm -v $PWD/app:/app --name pyscraper pyscraper:3
